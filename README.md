@@ -8,6 +8,18 @@ This project demonstrates a modular conversational assistant built using LangGra
 
 The LangGraph Travel-Sales Agent simulates a real-world travel inquiry system where customers can ask questions about destinations, attractions, durations, prices, and package details. The system intelligently decides whether a question should be handled by the Travel Consultant, the Sales Consultant, or both.
 
+# Data Preparation Flow
+Faker + Templates
+   ↓
+Travel Packages Dataset (5,000 rows)
+   ↓
+Combined Text
+   ↓
+Embedding via HuggingFace Model
+   ↓
+Saved to Pickle + Uploaded to Pinecone
+
+
 ## Key Features
 
 - **Agent Routing with LangGraph**  
@@ -43,6 +55,32 @@ The LangGraph Travel-Sales Agent simulates a real-world travel inquiry system wh
    - Fallback (unrecognized or unsupported queries)
 3. Each agent runs a `ConversationalRetrievalChain` over travel package data and responds within its defined scope.
 4. The final answer is returned and printed to the user.
+
+# LangGraph Flow Diagram
+
+                [ Start / User Query ]
+                          ↓
+                    [ Router Node ]
+             ┌──────────┼───────────┐
+             ↓          ↓           ↓
+        [Travel]    [Sales]     [Multi]
+             ↓          ↓           ↓
+           [END]      [END]       [END]
+                          ↓
+                    [Fallback]
+
+# Retrieval Chain Diagram (for each agent)
+User Query
+   ↓
+Prompt + Retriever
+   ↓
+Relevant Embeddings from Pinecone
+   ↓
+Context + Query to LLM
+   ↓
+Final Answer
+
+
 
 ## Example Interaction
 
