@@ -9,6 +9,7 @@ This project demonstrates a modular conversational assistant built using LangGra
 The LangGraph Travel-Sales Agent simulates a real-world travel inquiry system where customers can ask questions about destinations, attractions, durations, prices, and package details. The system intelligently decides whether a question should be handled by the Travel Consultant, the Sales Consultant, or both.
 
 # Data Preparation Flow
+
 Faker + Templates
    ↓
 Travel Packages Dataset (5,000 rows)
@@ -18,6 +19,15 @@ Combined Text
 Embedding via HuggingFace Model
    ↓
 Saved to Pickle + Uploaded to Pinecone
+
+# System Architecture 
+
+
+
+![System Architecture](images/Assesment.png)
+
+[Download .drawio file](images/Assesment.drawio)
+
 
 
 ## Key Features
