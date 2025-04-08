@@ -11,8 +11,7 @@ The LangGraph Travel-Sales Agent simulates a real-world travel inquiry system wh
 # Data Preparation Flow
 ```
 
-Faker + Templates
-   ↓
+
 Travel Packages Dataset (5,000 rows)
    ↓
 Combined Text
