@@ -20,13 +20,11 @@ Embedding via HuggingFace Model
    ↓
 Saved to Pickle + Uploaded to Pinecone
 
-# System Architecture 
 
+###  System Architecture Diagram
 
+![System Architecture](https://github.com/sidhu7777/Perseverance_Enterprise_Assessment/raw/main/images/Assesment.png)
 
-![System Architecture](images/Assesment.png)
-
-[Download .drawio file](images/Assesment.drawio)
 
 
 
@@ -80,6 +78,7 @@ Saved to Pickle + Uploaded to Pinecone
                     [Fallback]
 
 # Retrieval Chain Diagram (for each agent)
+
 User Query
    ↓
 Prompt + Retriever
@@ -89,6 +88,7 @@ Relevant Embeddings from Pinecone
 Context + Query to LLM
    ↓
 Final Answer
+
 
 
 
