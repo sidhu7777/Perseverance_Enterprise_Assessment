@@ -100,20 +100,66 @@ Final Answer
 
 
 ## Example Interaction
+```
 
-**User:** What are the packages available for Paris?  
-**Travel Consultant:**  
-The Paris packages available are:  
-1. Budget-Friendly Paris Trip (ROM-P-2922) - 5N/3D trip during Autumn  
-2. Budget-Friendly Paris Trip (WLD-P-4471) - 2N/6D trip during Spring  
-3. Budget-Friendly Paris Trip (ADV-P-7710) - 3N/5D trip during Autumn  
-4. Budget-Friendly Paris Trip (REL-P-4089) - 2N/5D trip during Summer  
+LangGraph Travel-Sales Agent is live. Type 'exit' to quit.
+[TRAVEL NODE]
+Question: what are best destination in italy ?
 
-Please let me know if you would like more information on any specific package.
+Final Answer: Some of the best destinations in Italy are Rome, Florence, Venice, Milan, and the Amalfi Coast.
 
-**User:** What is the cost for the Budget-Friendly Paris Trip (ROM-P-2922)?  
-**Sales Consultant:**  
-The total cost for the Budget-Friendly Paris Trip (ROM-P-2922) is 28,900.
+
+[TRAVEL NODE]
+Question: what are the packages available for rome ? 
+
+Final Answer: The packages available for Rome are:
+1) Budget-Friendly Rome Trip (ADV-R-1592)
+2) Budget-Friendly Rome Trip (ROM-R-9076)
+3) Budget-Friendly Rome Trip (ADV-R-6591)
+4) Budget-Friendly Rome Trip (WLD-R-2153)
+
+
+[SALES NODE]
+Question: what is the duration For Budget-Friendly Rome Trip (ADV-R-1592)?
+
+Final Answer: The duration of the Budget-Friendly Rome Trip (ADV-R-1592) is 2 nights and 6 days.
+
+
+[SALES NODE]
+Question: what is the price for it?
+
+Final Answer: The total cost for the Budget-Friendly Rome Trip (ADV-R-1592) is 17889.
+
+
+[SALES NODE]
+Question: what are exclusions and inclusion for it ?
+
+Final Answer: For the Budget-Friendly Rome Trip (ADV-R-1592):
+- **Inclusions**: Bus, Guided Tours, Dinner
+- **Exclusions**: Entry tickets, Lunch
+
+
+[SALES NODE]
+Question: what is the cheapest pakage available for rome?
+
+Final Answer: The cheapest package available for Rome is 'Budget-Friendly Rome Trip (ADV-R-1592)' with a total cost of 17889.
+
+
+[SALES NODE]
+Question: what is the costliest package avaolable for rome ?
+
+Final Answer: The costliest package available for Rome is 'Budget-Friendly Rome Trip (WLD-R-7572)' with a total cost of 93935.
+
+
+[MULTI NODE]
+
+Final Answer: The duration of the Budget-Friendly Rome Trip (ROM-R-9076) is 3 nights/6 days. The main attractions included in this package are Duomo Cathedral, Hagia Sophia, and Table Mountain.
+
+The duration is 6N/3D and the main attractions included in the costliest package are Duomo Cathedral, Opera House, Christ the Redeemer.
+
+Ending chat.
+
+```
 
 ## Design Considerations
 
